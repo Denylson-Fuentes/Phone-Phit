@@ -4,6 +4,7 @@ import { Camera } from 'expo-camera';
 import { Video } from 'expo-av';
 import axios from 'axios';
 import * as FS from 'expo-file-system'
+import ApiKeys from './Api';
 
 
 function PredictionScreen (){
@@ -30,10 +31,9 @@ function PredictionScreen (){
   }, []);
 
 
-
   const getPrediction = async() =>{
     console.log("Called get Predictions")
-    await FS.uploadAsync("http://192.168.1.111:5000/predict",  record, {
+    await FS.uploadAsync(ApiKeys.prediction,  record, {
       headers:{
         "content-type": "video/mp4"
       },

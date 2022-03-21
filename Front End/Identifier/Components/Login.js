@@ -2,6 +2,7 @@ import React,{ Component } from 'react';
 import { StyleSheet, Text, View, Button, Alert } from 'react-native';
 import axios from 'axios';
 import { TextInput, TouchableOpacity } from 'react-native-gesture-handler';
+import ApiKeys from './Api';
 
 
 export default class LoginScreen extends Component {
@@ -13,13 +14,12 @@ export default class LoginScreen extends Component {
             message : ''
         }
     }
-    
 
     Login = async() =>{
         const usernameVal = this.state.username;
         const passwordVal = this.state.password;
 
-        await axios.get("http://192.168.1.111:5000/login",
+        await axios.get(ApiKeys.login,
         {
             params:{
                 username : this.state.username,

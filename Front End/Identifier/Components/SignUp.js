@@ -2,6 +2,7 @@ import React,{ Component } from 'react';
 import { Text, View, Alert, StyleSheet, ScrollView } from 'react-native';
 import axios from 'axios';
 import { TextInput, TouchableOpacity } from 'react-native-gesture-handler';
+import ApiKeys from './Api';
 
 
 export default class SignUp extends Component {
@@ -32,7 +33,6 @@ export default class SignUp extends Component {
         }
         this.SignUp = this.SignUp.bind(this)
     }
-
     SignUp = () =>{
         const usernameVal = this.state.username;
         const passwordVal = this.state.password;
@@ -45,7 +45,7 @@ export default class SignUp extends Component {
         if(this.state.username == this.state.confirmUsername){
             if(this.state.password == this.state.confirmPassword){
 
-                axios.post("http://192.168.1.111:5000/signup",
+                axios.post(ApiKeys.signup,
                     {
                         username : this.state.username,
                         password: this.state.password,

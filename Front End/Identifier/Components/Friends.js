@@ -9,9 +9,9 @@ class FriendScreen extends Component{
         super(props);
         this.state = {
             friends: [
-                {Name: 'Manuel', Total_Hours: 100, Total_Minutes : 25, Calories: 250},
-                {Name: 'Roger', Total_Hours: 50, Total_Minutes : 50, Calories: 500},
-                {Name: 'Karl',Total_Hours: 20, Total_Minutes : 3, Calories: 1000}
+                {Name: 'Howard', Total_Hours: 100, Total_Minutes : 25, Calories: 250},
+                {Name: 'Christiano', Total_Hours: 50, Total_Minutes : 50, Calories: 500},
+                {Name: 'Messi',Total_Hours: 20, Total_Minutes : 3, Calories: 1000}
             ]
         }
         // console.log(this)

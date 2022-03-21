@@ -4,6 +4,8 @@ import { StyleSheet, Text, View } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { Button, TextInput } from 'react-native-paper';
 import axios from 'axios';
+import ApiKeys from './Api';
+
 
 
 class UserDetails extends Component{
@@ -25,7 +27,7 @@ class UserDetails extends Component{
     }
 
     componentDidMount = async() => {
-        await axios.get('http://192.168.1.111:5000/details', {
+        await axios.get(ApiKeys.details, {
             params:{
                 user: this.props.user
             }

@@ -11,7 +11,7 @@ class HomeScreen extends Component{
     constructor(props){
         super(props);
         this.state = {
-            username: "dfuentes8",
+            username: "Joe",
         }
     }
 

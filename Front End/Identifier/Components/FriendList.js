@@ -3,6 +3,7 @@ import { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { DataTable} from 'react-native-paper';
 import axios from 'axios';
+import ApiKeys from './Api';
 
 const List = item =>(
     <DataTable.Row style = {styles.datarow} >
@@ -24,7 +25,7 @@ class FriendList extends Component{
     }
 
     componentDidMount = async() =>{
-        await axios.get('http://192.168.1.111:5000/friends',{
+        await axios.get(ApiKeys.friends,{
             params:{
                 user: this.state.user
             }
